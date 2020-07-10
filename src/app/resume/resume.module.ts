@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { ResumeRoutingModule } from './resume-routing.module';
 import { ResumeComponent } from './resume.component';
+import { WhoAmIComponent } from './whoami/whoami.component';
 
 
 @NgModule({
-  declarations: [ResumeComponent],
+  declarations: [ResumeComponent, WhoAmIComponent],
   imports: [
     CommonModule,
     ResumeRoutingModule
