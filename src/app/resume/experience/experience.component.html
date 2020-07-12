@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>
+                <p class="text-primary">
+                    <svg class="bi" fill="currentColor">
+                        <use xlink:href="assets/bootstrap-icons.svg#chevron-right" />
+                    </svg>
+                    <strong>{{ experience.company }}</strong>
+                </p>
+            </h5>
+            <ng-container *ngFor="let project of experience.projects">
+                <p class="content"><strong>{{ project.position }}</strong>
+                    <span class="badge text-dark">{{ project.dates }}</span>
+                </p>
+                <p class="content">{{ project.description }}</p>
+                <hr>
+            </ng-container>
+        </div>
+    </div>
+</div>
