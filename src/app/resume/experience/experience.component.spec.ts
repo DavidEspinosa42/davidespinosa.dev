@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExperienceComponent } from './experience.component';
-import { Experience } from '../experience.interface';
+import { Experience } from './experience.interface';
 
 describe('ExperienceComponent', () => {
   let component: ExperienceComponent;
@@ -45,9 +45,9 @@ describe('ExperienceComponent', () => {
 
   it('should render company name with chevron right icon', () => {
     expect(nativeElement.querySelectorAll('div.container div.row div.col h5').length).toEqual(1);
-    expect(nativeElement.querySelector('p.text-primary svg.bi use').getAttribute('xlink:href'))
+    expect(nativeElement.querySelector('p.company svg.bi use').getAttribute('xlink:href'))
       .toEqual('assets/bootstrap-icons.svg#chevron-right');
-    expect(nativeElement.querySelector('p.text-primary').textContent).toEqual('ACCENTURE');
+    expect(nativeElement.querySelector('p.company').textContent).toEqual('ACCENTURE');
   });
 
   it('should render 4 paragraphs with 2 breaks', () => {

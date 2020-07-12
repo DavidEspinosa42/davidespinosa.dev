@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Experience } from './experience.interface';
+import { Experience } from './experience/experience.interface';
 
 @Component({
   selector: 'app-resume',
