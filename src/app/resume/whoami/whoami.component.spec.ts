@@ -29,7 +29,7 @@ describe('WhoAmIComponent', () => {
     expect(nativeElement.querySelectorAll('div.container div.row div.col-sm-8 p').length).toEqual(3);
     expect(nativeElement.querySelectorAll('.col-sm-8 p').item(0).textContent).toEqual('Hi! I\'m David Espinosa, a Sr. Full Stack Software Developer from Argentina.');
     expect(nativeElement.querySelectorAll('.col-sm-8 p').item(1).textContent).toEqual('I love using Typescript with the Serverless framework for the backend and the Angular framework for the frontend.');
-    expect(nativeElement.querySelectorAll('.col-sm-8 p').item(2).textContent).toEqual('I\'m convinced serverless is the future, that\'s why I\'m constantly learning new stuff related to AWS serverless services.');
+    expect(nativeElement.querySelectorAll('.col-sm-8 p').item(2).textContent).toEqual('I\'m convinced serverless is the future, that\'s why I\'m constantly learning about AWS serverless services.');
   });
 
   it('should render 2 AWS badges', () => {
