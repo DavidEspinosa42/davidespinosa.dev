@@ -9,10 +9,10 @@ import { TitleComponent } from './title/title.component';
 
 
 @NgModule({
-  declarations: [ResumeComponent, WhoAmIComponent, ExperienceComponent, TitleComponent],
-  imports: [
-    CommonModule,
-    ResumeRoutingModule
-  ]
+	declarations: [ResumeComponent, WhoAmIComponent, ExperienceComponent, TitleComponent],
+	imports: [
+		CommonModule,
+		ResumeRoutingModule
+	]
 })
 export class ResumeModule { }
