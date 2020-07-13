@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Experience } from './experience/experience.interface';
+import { InfoItems } from './info/info-items.interface';
 
 @Component({
 	selector: 'app-resume',
@@ -71,6 +72,25 @@ export class ResumeComponent implements OnInit {
 		}
 	];
 
+	public certifications: InfoItems = {
+		icon: 'award',
+		items: ['AWS Solutions Architect Associate', 'AWS Cloud Practitioner', 'Professional Scrum Master']
+	};
+
+	public languages: InfoItems = {
+		icon: 'chat',
+		items: ['English (Advanded)', 'Spanish (Native)']
+	};
+
+	public education: InfoItems = {
+		icon: 'easel',
+		items: ['Bachelor\'s Degree in Computer Science (In Progress)']
+	};
+
+	public skills: InfoItems = {
+		icon: 'check2',
+		items: ['Angular', 'Typescript', 'Node.js', 'Karma', 'Jasmine', 'HTML', 'SCSS', 'GIT', 'Scrum', 'MySQL', 'AWS DynamoDB (NoSQL)', 'AWS Serverless Services']
+	};
 
 	constructor() { }
 

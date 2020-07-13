@@ -1,0 +1,10 @@
+<div class="container">
+	<ng-container *ngFor="let item of items.items">
+		<p>
+			<svg class="bi" fill="currentColor">
+				<use [attr.xlink:href]="'assets/bootstrap-icons.svg#' + items.icon"/>
+			</svg>
+			{{ item }}
+		</p>
+	</ng-container>
+</div>

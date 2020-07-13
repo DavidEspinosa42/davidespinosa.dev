@@ -6,10 +6,11 @@ import { ResumeComponent } from './resume.component';
 import { WhoAmIComponent } from './whoami/whoami.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { TitleComponent } from './title/title.component';
+import { InfoComponent } from './info/info.component';
 
 
 @NgModule({
-	declarations: [ResumeComponent, WhoAmIComponent, ExperienceComponent, TitleComponent],
+	declarations: [ResumeComponent, WhoAmIComponent, ExperienceComponent, TitleComponent, InfoComponent],
 	imports: [
 		CommonModule,
 		ResumeRoutingModule
