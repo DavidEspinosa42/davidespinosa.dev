@@ -1,5 +1,17 @@
 <div class="container">
-	<app-whoami></app-whoami>
-	<app-title [title]="'EXPERIENCE'"></app-title>
-	<app-experience *ngFor="let experience of experiences" [experience]="experience"></app-experience>
+	<div class="row">
+		<div class="col">
+			<app-whoami></app-whoami>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-9">
+			<app-title [title]="'EXPERIENCE'"></app-title>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-9">
+			<app-experience *ngFor="let experience of experiences" [experience]="experience"></app-experience>
+		</div>
+	</div>
 </div>
