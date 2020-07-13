@@ -1,0 +1,19 @@
+.container {
+    background-color: white;
+    padding-bottom: 1rem;
+
+    h5 {
+        margin: 0;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .line {
+        width: 5rem;
+        height: 0.2rem;
+        background: black;
+        margin: 0.5rem auto;
+    }
+}

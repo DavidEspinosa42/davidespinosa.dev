@@ -5,10 +5,11 @@ import { ResumeRoutingModule } from './resume-routing.module';
 import { ResumeComponent } from './resume.component';
 import { WhoAmIComponent } from './whoami/whoami.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { TitleComponent } from './title/title.component';
 
 
 @NgModule({
-  declarations: [ResumeComponent, WhoAmIComponent, ExperienceComponent],
+  declarations: [ResumeComponent, WhoAmIComponent, ExperienceComponent, TitleComponent],
   imports: [
     CommonModule,
     ResumeRoutingModule
