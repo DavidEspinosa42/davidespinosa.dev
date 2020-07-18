@@ -8,8 +8,8 @@ describe('InfoComponent', () => {
 	let fixture: ComponentFixture<InfoComponent>;
 	let nativeElement: HTMLElement;
 	const itemsMock: InfoItems = {
-		icon: 'award',
-		items: ['AWS Solutions Architect Associate', 'AWS Cloud Practitioner']
+		icon: 'check2',
+		items: ['Angular', 'AWS']
 	};
 
 	beforeEach(async(() => {
@@ -35,11 +35,11 @@ describe('InfoComponent', () => {
 		expect(nativeElement.querySelectorAll('p').length).toEqual(2);
 
 		expect(nativeElement.querySelectorAll('p svg.bi use').item(0).getAttribute('xlink:href'))
-			.toEqual('assets/bootstrap-icons.svg#award');
-		expect(nativeElement.querySelectorAll('p').item(0).textContent).toContain('AWS Solutions Architect Associate');
+			.toEqual('assets/bootstrap-icons.svg#check2');
+		expect(nativeElement.querySelectorAll('p').item(0).textContent).toContain('Angular');
 
 		expect(nativeElement.querySelectorAll('p svg.bi use').item(1).getAttribute('xlink:href'))
-			.toEqual('assets/bootstrap-icons.svg#award');
-		expect(nativeElement.querySelectorAll('p').item(1).textContent).toContain('AWS Cloud Practitioner');
+			.toEqual('assets/bootstrap-icons.svg#check2');
+		expect(nativeElement.querySelectorAll('p').item(1).textContent).toContain('AWS');
 	});
 });

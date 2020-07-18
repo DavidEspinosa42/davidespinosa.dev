@@ -5,6 +5,7 @@ import { WhoAmIComponent } from './whoami/whoami.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { TitleComponent } from './title/title.component';
 import { InfoComponent } from './info/info.component';
+import { CertificationComponent } from './certification/certification.component';
 
 describe('ResumeComponent', () => {
 	let component: ResumeComponent;
@@ -13,7 +14,7 @@ describe('ResumeComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ ResumeComponent, WhoAmIComponent, ExperienceComponent, TitleComponent, InfoComponent ]
+			declarations: [ ResumeComponent, WhoAmIComponent, ExperienceComponent, TitleComponent, InfoComponent, CertificationComponent ]
 		})
 		.compileComponents();
 	}));
@@ -42,8 +43,9 @@ describe('ResumeComponent', () => {
 		expect(nativeElement.querySelectorAll('div.container div.row div.col-lg-9 app-experience').length).toEqual(3);
 	});
 
-	it('should render 4 info components with 4 titles', () => {
+	it('should render 3 info and 1 certification components with 4 titles', () => {
 		expect(nativeElement.querySelectorAll('div.container div.row div.col-lg-3 app-title').length).toEqual(4);
-		expect(nativeElement.querySelectorAll('div.container div.row div.col-lg-3 app-info').length).toEqual(4);
+		expect(nativeElement.querySelectorAll('div.container div.row div.col-lg-3 app-certification').length).toEqual(1);
+		expect(nativeElement.querySelectorAll('div.container div.row div.col-lg-3 app-info').length).toEqual(3);
 	});
 });

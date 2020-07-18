@@ -1,0 +1,18 @@
+<ng-container *ngFor="let item of items.items">
+	<p>
+		<svg class="bi" fill="currentColor">
+			<use [attr.xlink:href]="'assets/bootstrap-icons.svg#' + items.icon" />
+		</svg>
+		<a data-toggle="modal" [attr.data-target]="'#' + item.image" href="">{{ item.name }}</a>
+	</p>
+
+	<div class="modal fade" id={{item.image}} aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<img class="img-fluid" [src]="'assets/' + item.image + '.png'" alt="Certification image">
+				</div>
+			</div>
+		</div>
+	</div>
+</ng-container>
