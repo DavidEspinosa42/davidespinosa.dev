@@ -1,29 +1,24 @@
-.container {
-	padding: 0.5rem 1rem;
-	margin: 0;
-	background-color: #ffffff;
+.company {
+	color: #024dbc;
+	margin-top: 1.5rem;
 
-	.company {
-		color: #024dbc;
+	.bi {
+		margin: 0 0.3rem 0.3rem 0;
+		height: 1.3rem;
+		width: 1.3rem;
+	}
+}
 
-		.bi {
-			margin: 0 0.3rem 0.3rem 0;
-			height: 1.3rem;
-			width: 1.3rem;
-		}
+.content {
+	margin-left: 1.5rem;
+
+	strong {
+		margin-right: 0.4rem;
 	}
 
-	.content {
-		margin-left: 1.5rem;
-
-		strong {
-			margin-right: 0.4rem;
-		}
-
-		.badge {
-			font-size: 0.9rem;
-			font-weight: normal;
-			background-color: lightgrey;
-		}
+	.badge {
+		font-size: 0.9rem;
+		font-weight: normal;
+		background-color: lightgrey;
 	}
 }

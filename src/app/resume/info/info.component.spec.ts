@@ -32,14 +32,14 @@ describe('InfoComponent', () => {
 	});
 
 	it('should render a paragraph with an icon for each item received', () => {
-		expect(nativeElement.querySelectorAll('div.container p').length).toEqual(2);
+		expect(nativeElement.querySelectorAll('p').length).toEqual(2);
 
-		expect(nativeElement.querySelectorAll('div.container p svg.bi use').item(0).getAttribute('xlink:href'))
+		expect(nativeElement.querySelectorAll('p svg.bi use').item(0).getAttribute('xlink:href'))
 			.toEqual('assets/bootstrap-icons.svg#award');
-		expect(nativeElement.querySelectorAll('div.container p').item(0).textContent).toContain('AWS Solutions Architect Associate');
+		expect(nativeElement.querySelectorAll('p').item(0).textContent).toContain('AWS Solutions Architect Associate');
 
-		expect(nativeElement.querySelectorAll('div.container p svg.bi use').item(1).getAttribute('xlink:href'))
+		expect(nativeElement.querySelectorAll('p svg.bi use').item(1).getAttribute('xlink:href'))
 			.toEqual('assets/bootstrap-icons.svg#award');
-		expect(nativeElement.querySelectorAll('div.container p').item(1).textContent).toContain('AWS Cloud Practitioner');
+		expect(nativeElement.querySelectorAll('p').item(1).textContent).toContain('AWS Cloud Practitioner');
 	});
 });

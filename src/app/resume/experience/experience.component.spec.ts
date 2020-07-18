@@ -44,15 +44,15 @@ describe('ExperienceComponent', () => {
 	});
 
 	it('should render company name with chevron right icon', () => {
-		expect(nativeElement.querySelectorAll('div.container h5').length).toEqual(1);
+		expect(nativeElement.querySelectorAll('h5').length).toEqual(1);
 		expect(nativeElement.querySelector('p.company svg.bi use').getAttribute('xlink:href'))
 			.toEqual('assets/bootstrap-icons.svg#chevron-right');
 		expect(nativeElement.querySelector('p.company').textContent).toEqual('ACCENTURE');
 	});
 
 	it('should render 4 paragraphs with 2 breaks', () => {
-		expect(nativeElement.querySelectorAll('div.container p.content').length).toEqual(4);
-		expect(nativeElement.querySelectorAll('div.container hr').length).toEqual(2);
+		expect(nativeElement.querySelectorAll('p.content').length).toEqual(4);
+		expect(nativeElement.querySelectorAll('hr').length).toEqual(2);
 	});
 
 	it('should render 2 paragraphs with positions and dates', () => {
