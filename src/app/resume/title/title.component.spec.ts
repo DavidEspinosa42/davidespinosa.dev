@@ -28,6 +28,6 @@ describe('TitleComponent', () => {
 	});
 
 	it('should render a centered title', () => {
-		expect(nativeElement.querySelector('div.container h5 p.text-center strong').textContent).toEqual('MY TITLE');
+		expect(nativeElement.querySelector('div.wrapper h5 p.text-center strong').textContent).toEqual('MY TITLE');
 	});
 });
