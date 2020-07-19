@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BlogComponent } from './blog.component';
 import { BlogExcerptComponent } from './blog-excerpt/blog-excerpt.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 describe('BlogComponent', () => {
 	let component: BlogComponent;
@@ -9,7 +10,7 @@ describe('BlogComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [BlogComponent, BlogExcerptComponent]
+			declarations: [BlogComponent, BlogExcerptComponent, BlogPostComponent]
 		})
 			.compileComponents();
 	}));
