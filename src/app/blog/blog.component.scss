@@ -9,6 +9,10 @@
 
 		&.paddingless {
 			padding: 0;
+
+			h3 {
+				margin: 1rem;
+			}
 		}
 	}
 }

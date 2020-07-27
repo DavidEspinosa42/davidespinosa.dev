@@ -1,6 +1,7 @@
 <div class="container">
 	<div class="row paddingless">
 		<div class="col">
+			<h3>{{ errorMessage }}</h3>
 			<ng-container *ngFor="let blogExcerpt of blogExcerpts">
 				<app-blog-excerpt [blogExcerpt]="blogExcerpt"></app-blog-excerpt>
 			</ng-container>

@@ -10,13 +10,18 @@ import { BlogExcerpt } from './blog-excerpt/blog-excerpt.interface';
 export class BlogComponent implements OnInit {
 
 	public blogExcerpts: BlogExcerpt[];
+	public errorMessage: string;
 
 	constructor(private blogService: BlogService) { }
 
 	ngOnInit(): void {
-		this.blogService.getBlogExcerpts().subscribe(response => {
-			this.blogExcerpts = response;
-		});
+		this.blogService.getBlogExcerpts().subscribe(
+			(response: BlogExcerpt[]) => {
+				this.blogExcerpts = response;
+			}, (error: string) => {
+				this.errorMessage = error;
+			}
+		);
 	}
 
 }

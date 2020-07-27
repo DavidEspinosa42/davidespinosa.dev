@@ -1,1 +1,15 @@
-<p>blog-post works!</p>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div *ngIf="!errorMessage">
+				<h3>{{ blogPost?.title }}</h3>
+				<h6>By David Espinosa</h6>
+				<hr>
+				<p>{{ blogPost?.content }}</p>
+			</div>
+			<div *ngIf="errorMessage">
+				<h3>{{ errorMessage }}</h3>
+			</div>
+		</div>
+	</div>
+</div>
