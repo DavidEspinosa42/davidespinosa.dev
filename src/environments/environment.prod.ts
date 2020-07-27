@@ -3,7 +3,7 @@ import { Environment } from './environment.interface';
 export const environment: Environment = {
 	production: true,
 	api: {
-		getBlogExcerpts: '',
-		getBlog: '',
+		getBlogExcerpts: 'assets/mocks/blog-excerpts-response.json',
+		getBlog: 'assets/mocks',
 	}
 };
