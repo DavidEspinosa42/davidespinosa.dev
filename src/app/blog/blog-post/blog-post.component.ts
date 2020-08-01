@@ -19,7 +19,6 @@ export class BlogPostComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.route.params.subscribe(params => {
-			console.log(params);
 			this.blogPostService.getBlogPost(params.link).subscribe(
 				(response: BlogPost) => {
 					this.blogPost = response;

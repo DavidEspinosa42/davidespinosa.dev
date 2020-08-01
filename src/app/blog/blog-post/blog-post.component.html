@@ -5,7 +5,7 @@
 				<h3>{{ blogPost?.title }}</h3>
 				<h6>By David Espinosa</h6>
 				<hr>
-				<p>{{ blogPost?.content }}</p>
+				<div [innerHTML]="blogPost?.content"></div>
 			</div>
 			<div *ngIf="errorMessage">
 				<h3>{{ errorMessage }}</h3>

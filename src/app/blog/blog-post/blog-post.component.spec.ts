@@ -54,7 +54,7 @@ describe('BlogPostComponent', () => {
 		fixture.detectChanges();
 
 		expect(nativeElement.querySelector('div.container div.row div.col div h3').textContent).toEqual('Lorem Ipsum');
-		expect(nativeElement.querySelector('div.container div.row div.col div p').textContent).toEqual('Lorem ipsum dolor sit amet...');
+		expect(nativeElement.querySelector('div.container div.row div.col div div').textContent).toEqual('Lorem ipsum dolor sit amet...');
 	});
 
 	it('should call service OnInit and render error text if call to service fails', () => {
