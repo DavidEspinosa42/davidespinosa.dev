@@ -6,6 +6,8 @@
 				<h6>By David Espinosa</h6>
 				<hr>
 				<div [innerHTML]="blogPost?.content"></div>
+				<hr>
+				<share-buttons class="text-center" [exclude]="['pinterest', 'messenger', 'tumblr','mix','xing','sms','print','copy']" [showText]="true"></share-buttons>
 			</div>
 			<div *ngIf="errorMessage">
 				<h3>{{ errorMessage }}</h3>

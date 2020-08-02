@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BlogPostComponent } from './blog-post.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { BlogPostService } from './blog-post.service';
 import { BlogPost } from './blog-post.interface';
 import { of, throwError } from 'rxjs';
@@ -22,7 +23,7 @@ describe('BlogPostComponent', () => {
 		blogPostService = jasmine.createSpyObj<BlogPostService>('BlogPostService', ['getBlogPost']);
 
 		TestBed.configureTestingModule({
-			imports: [RouterTestingModule],
+			imports: [RouterTestingModule, ShareButtonsModule, ShareIconsModule],
 			declarations: [BlogPostComponent],
 			providers: [{ provide: BlogPostService, useValue: blogPostService }]
 		}).compileComponents();
@@ -66,5 +67,13 @@ describe('BlogPostComponent', () => {
 		expect(component.errorMessage).toEqual(errorMessageMock);
 		expect(blogServiceSpy.calls.count()).toEqual(1);
 		expect(nativeElement.querySelector('div.container div.row div.col div h3').textContent).toEqual('error text received');
+	});
+
+	it('should render share buttons', () => {
+		blogPostService.getBlogPost.and.returnValue(of(blogPostServiceMock));
+
+		fixture.detectChanges();
+
+		expect(nativeElement.querySelector('div.container div.row div.col div share-buttons').innerHTML).not.toBeNull();
 	});
 });
