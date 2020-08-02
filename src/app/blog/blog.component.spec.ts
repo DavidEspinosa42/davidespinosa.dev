@@ -49,24 +49,36 @@ describe('BlogComponent', () => {
 	});
 
 	it('should call service OnInit and render a blog excerpt for each item received', () => {
+		expect(component.loading).toEqual(true);
 		const blogServiceSpy = blogService.getBlogExcerpts.and.returnValue(of(blogServiceMock));
 
 		fixture.detectChanges();
 
 		expect(component.blogExcerpts).toEqual(blogServiceMock);
 		expect(component.errorMessage).toEqual(undefined);
+		expect(component.loading).toEqual(false);
 		expect(blogServiceSpy.calls.count()).toEqual(1);
 		expect(nativeElement.querySelectorAll('div.container div.row.paddingless div.col app-blog-excerpt').length).toEqual(2);
 	});
 
 	it('should call service OnInit and render error text if call to service fails', () => {
+		expect(component.loading).toEqual(true);
 		const blogServiceSpy = blogService.getBlogExcerpts.and.returnValue(throwError(errorMessageMock));
 
 		fixture.detectChanges();
 
 		expect(component.blogExcerpts).toEqual(undefined);
 		expect(component.errorMessage).toEqual(errorMessageMock);
+		expect(component.loading).toEqual(false);
 		expect(blogServiceSpy.calls.count()).toEqual(1);
-		expect(nativeElement.querySelector('div.container div.row.paddingless div.col h3').textContent).toEqual('error text received');
+		expect(nativeElement.querySelector('div.container div.paddingless.row div.col h3').textContent).toEqual('error text received');
+	});
+
+	it('should hide spinner when backend answers', () => {
+		blogService.getBlogExcerpts.and.returnValue(of(blogServiceMock));
+
+		fixture.detectChanges();
+
+		expect(nativeElement.querySelector('app-spinner')).toBeNull();
 	});
 });

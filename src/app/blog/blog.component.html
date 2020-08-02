@@ -1,10 +1,11 @@
 <div class="container">
 	<div class="row paddingless">
 		<div class="col">
-			<h3>{{ errorMessage }}</h3>
+			<h3 class="text-center" *ngIf="errorMessage">{{ errorMessage }}</h3>
 			<ng-container *ngFor="let blogExcerpt of blogExcerpts">
 				<app-blog-excerpt [blogExcerpt]="blogExcerpt"></app-blog-excerpt>
 			</ng-container>
 		</div>
 	</div>
 </div>
+<app-spinner *ngIf="loading"></app-spinner>

@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 	],
 	imports: [
 		BrowserModule,
+		SharedModule,
 		AppRoutingModule,
 		HttpClientModule
 	],

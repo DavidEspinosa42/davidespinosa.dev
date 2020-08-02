@@ -30,6 +30,11 @@
                                 "glob": "bootstrap-icons.svg",
                                 "input": "./node_modules/bootstrap-icons/",
                                 "output": "/assets"
+							},
+							{
+                                "glob": "bootstrap.min.css",
+                                "input": "./node_modules/bootstrap/dist/css/",
+                                "output": "/assets"
                             }
                         ],
                         "styles": [

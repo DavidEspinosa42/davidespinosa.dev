@@ -11,6 +11,7 @@ import { BlogPostService } from './blog-post.service';
 export class BlogPostComponent implements OnInit {
 	public blogPost: BlogPost;
 	public errorMessage: string;
+	public loading: boolean = true;
 
 	constructor(
 		private route: ActivatedRoute,
@@ -21,8 +22,10 @@ export class BlogPostComponent implements OnInit {
 		this.route.params.subscribe(params => {
 			this.blogPostService.getBlogPost(params.link).subscribe(
 				(response: BlogPost) => {
+					this.loading = false;
 					this.blogPost = response;
 				}, (error: string) => {
+					this.loading = false;
 					this.errorMessage = error;
 				}
 			);

@@ -40,12 +40,14 @@ describe('BlogPostComponent', () => {
 	});
 
 	it('should call service OnInit get blog data', () => {
+		expect(component.loading).toEqual(true);
 		const blogServiceSpy = blogPostService.getBlogPost.and.returnValue(of(blogPostServiceMock));
 
 		fixture.detectChanges();
 
 		expect(component.blogPost).toEqual(blogPostServiceMock);
 		expect(component.errorMessage).toEqual(undefined);
+		expect(component.loading).toEqual(false);
 		expect(blogServiceSpy.calls.count()).toEqual(1);
 	});
 
@@ -59,14 +61,16 @@ describe('BlogPostComponent', () => {
 	});
 
 	it('should call service OnInit and render error text if call to service fails', () => {
+		expect(component.loading).toEqual(true);
 		const blogServiceSpy = blogPostService.getBlogPost.and.returnValue(throwError(errorMessageMock));
 
 		fixture.detectChanges();
 
 		expect(component.blogPost).toEqual(undefined);
 		expect(component.errorMessage).toEqual(errorMessageMock);
+		expect(component.loading).toEqual(false);
 		expect(blogServiceSpy.calls.count()).toEqual(1);
-		expect(nativeElement.querySelector('div.container div.row div.col div h3').textContent).toEqual('error text received');
+		expect(nativeElement.querySelector('div.container div.row div.col h3').textContent).toEqual('error text received');
 	});
 
 	it('should render share buttons', () => {
@@ -74,6 +78,14 @@ describe('BlogPostComponent', () => {
 
 		fixture.detectChanges();
 
-		expect(nativeElement.querySelector('div.container div.row div.col div share-buttons').innerHTML).not.toBeNull();
+		expect(nativeElement.querySelector('div.container div.row div.col div share-buttons')).not.toBeNull();
+	});
+
+	it('should hide spinner when backend answers', () => {
+		blogPostService.getBlogPost.and.returnValue(of(blogPostServiceMock));
+
+		fixture.detectChanges();
+
+		expect(nativeElement.querySelector('app-spinner')).toBeNull();
 	});
 });
