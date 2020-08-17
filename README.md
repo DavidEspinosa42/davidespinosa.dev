@@ -1,27 +1,17 @@
-# Davidespinosa
+This repo contains the code of my website davidespinosa.dev using Angular for the frontend and AWS serverless for the backend.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+You will need to install Node (versión LTS): https://nodejs.org/en/
 
-## Development server
+I also recommend you to install Visual Studio Code: https://code.visualstudio.com/ and Git: https://git-scm.com/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Now you will need to create an AWS account (if you don't have it):
+https://aws.amazon.com/
 
-## Code scaffolding
+Create an access key:
+https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+And configure this generated credentials in your PC with the following command (replacing the values of key and secret):
 
-## Build
+serverless config credentials --provider aws --key AKIAIOSFODNN7EXAMPLE --secret wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Each project folder has it's own readme for development and deployment.
