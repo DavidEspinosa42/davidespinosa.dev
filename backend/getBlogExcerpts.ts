@@ -13,6 +13,9 @@ export const handler: APIGatewayProxyHandlerV2 = async (event: APIGatewayProxyEv
 		const result = await dynamoDb.scan(params).promise();
 		const response: APIGatewayProxyResultV2 = {
 			statusCode: 200,
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+			},
 			body: JSON.stringify(result.Items),
 		};
 		return response;
@@ -22,7 +25,10 @@ export const handler: APIGatewayProxyHandlerV2 = async (event: APIGatewayProxyEv
 
 		const response: APIGatewayProxyResultV2 = {
 			statusCode: error.statusCode || 501,
-			headers: { 'Content-Type': 'text/plain' },
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+				'Content-Type': 'text/plain',
+			},
 			body: 'Couldn\'t fetch the blog excerpts.',
 		};
 		return response;
