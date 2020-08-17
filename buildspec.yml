@@ -7,15 +7,15 @@ phases:
     commands:
       - cd ./frontend
       - npm install
-      - cd ./backend
+      - cd ../backend
       - npm install
   build:
     commands:
-      - cd ./frontend
+      - cd ../frontend
       - npm run build:prod
-      - cd ./backend
+      - cd ../backend
       - npm run deploy
   post_build:
     commands:
-      - aws s3 sync dist/davidespinosa s3://$BUCKET_NAME --delete
+      - aws s3 sync ../frontend/dist/davidespinosa s3://$BUCKET_NAME --delete
       - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/*"
