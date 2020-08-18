@@ -102,7 +102,7 @@ export class ResumeComponent implements OnInit {
 
 	public skills: InfoItems = {
 		icon: 'check2',
-		items: ['Angular', 'Typescript', 'Node.js', 'Karma', 'Jasmine', 'HTML', 'SCSS', 'GIT', 'MySQL', 'AWS DynamoDB (NoSQL)', 'AWS Serverless Services']
+		items: ['Angular Framework', 'Typescript / Node.js', 'Karma / Jasmine', 'HTML / SCSS', 'GIT', 'Serverless Framework', 'AWS Aurora MySQL', 'AWS DynamoDB (NoSQL)', 'AWS Lambda', 'AWS API Gateway', 'AWS CloudWatch', 'AWS Cloudfront', 'AWS Route 53', 'AWS S3 Buckets', 'AWS Secrets Manager']
 	};
 
 	constructor() { }
