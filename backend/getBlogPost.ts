@@ -7,7 +7,7 @@ export const handler: APIGatewayProxyHandlerV2 = async (event: APIGatewayProxyEv
 	const params: DynamoDB.DocumentClient.GetItemInput = {
 		TableName: process.env.BLOG_POST_TABLE,
 		Key: {
-			id: event.pathParameters.id,
+			link: event.pathParameters.link,
 		},
 	};
 

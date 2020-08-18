@@ -6,7 +6,7 @@ import { handler } from './getBlogPost';
 describe('getBlogPost', () => {
 	const event: Partial<APIGatewayProxyEventV2> = {
 		pathParameters: {
-			id: '23',
+			link: 'blog-link-mock',
 		},
 	};
 	const context: Partial<Context> = {};
@@ -16,7 +16,7 @@ describe('getBlogPost', () => {
 		const params: DynamoDB.DocumentClient.GetItemInput = {
 			TableName: process.env.BLOG_POST_TABLE,
 			Key: {
-				id: event.pathParameters.id,
+				link: event.pathParameters.link,
 			},
 		};
 		const mockDynamoDBResponse = {
@@ -46,7 +46,7 @@ describe('getBlogPost', () => {
 		const params: DynamoDB.DocumentClient.GetItemInput = {
 			TableName: process.env.BLOG_POST_TABLE,
 			Key: {
-				id: event.pathParameters.id,
+				link: event.pathParameters.link,
 			},
 		};
 		const mockDynamoDBResponse = {

@@ -47,13 +47,13 @@ const API: AWS.Serverless = {
 				Properties: {
 					AttributeDefinitions: [
 						{
-							AttributeName: 'id',
+							AttributeName: 'link',
 							AttributeType: 'S',
 						},
 					],
 					KeySchema: [
 						{
-							AttributeName: 'id',
+							AttributeName: 'link',
 							KeyType: 'HASH',
 						},
 					],
@@ -72,7 +72,7 @@ const API: AWS.Serverless = {
 			events: [
 				{
 					http: {
-						path: 'getBlogPost/{id}',
+						path: 'getBlogPost/{link}',
 						method: 'get',
 						cors: true,
 					},
