@@ -15,7 +15,15 @@ export class ResumeComponent implements OnInit {
 			projects: [
 				{
 					position: 'Sr. Full Stack Developer',
-					dates: '(December 2019 - Present)',
+					dates: '(June 2020 - Present)',
+					description: `In this project, we are developing a web form to allow managers of each country were Accenture has offices
+					to provide detailed information about them.
+					Since our web form will exist between 2 internal tools using MySQL, we decided to also use this kind of database to take
+					advantage of triggers and views to reduce our backend logic to a minimum.`
+				},
+				{
+					position: 'Sr. Full Stack Developer',
+					dates: '(December 2019 - May 2020)',
 					description: `I started working on a new internal project, a web app to manage and show the benefits, compensations
           			and rewards	of employees from the UK and Ireland, here we continued to use Angular and the Typescript language (for
           			frontend and backend) with the same AWS serverless services that we have been using with my team on the
