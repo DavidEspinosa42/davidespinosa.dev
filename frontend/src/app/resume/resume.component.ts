@@ -88,6 +88,10 @@ export class ResumeComponent implements OnInit {
 				image: 'AWS_Architect_Associate_David_Espinosa'
 			},
 			{
+				name: 'AWS Developer Associate',
+				image: 'AWS_Developer_Associate_David_Espinosa'
+			},
+			{
 				name: 'AWS Cloud Practitioner',
 				image: 'AWS_Cloud_Practitioner_David_Espinosa'
 			},
@@ -110,7 +114,11 @@ export class ResumeComponent implements OnInit {
 
 	public skills: InfoItems = {
 		icon: 'check2',
-		items: ['Angular Framework', 'Typescript / Node.js', 'Karma / Jasmine', 'HTML / SCSS', 'GIT', 'Serverless Framework', 'AWS Aurora MySQL', 'AWS DynamoDB (NoSQL)', 'AWS Lambda', 'AWS API Gateway', 'AWS CloudWatch', 'AWS Cloudfront', 'AWS Route 53', 'AWS S3 Buckets', 'AWS Secrets Manager']
+		items: [
+			'Angular Framework', 'Typescript', 'Node.js', 'Karma', 'Jasmine', 'HTML', 'CSS', 'GIT', 'Serverless Framework',
+			'AWS Aurora MySQL', 'AWS DynamoDB (NoSQL)', 'AWS Lambda', 'AWS API Gateway', 'AWS CloudWatch', 'AWS Cloudfront',
+			'AWS Route 53', 'AWS S3 Buckets', 'AWS Secrets Manager'
+		]
 	};
 
 	constructor() { }
