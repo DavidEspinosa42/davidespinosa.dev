@@ -35,7 +35,7 @@
 		"karma-webpack": "^4.0.2",
 		"npm-check": "^5.9.2",
 		"puppeteer": "^5.2.1",
-		"serverless": "^1.78.1",
+		"serverless": "^3.25.1",
 		"serverless-webpack": "^5.3.3",
 		"ts-loader": "^8.0.2",
 		"typescript": "^3.9.7",
